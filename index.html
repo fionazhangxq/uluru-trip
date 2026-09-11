@@ -14,6 +14,7 @@
     h1{font-family:Georgia,"Songti SC",serif;font-weight:500;font-size:clamp(2.25rem,10vw,4.8rem);line-height:.98;margin:10px 0 14px;letter-spacing:-.045em}.subtitle{color:var(--muted);font-size:1rem;margin:0}.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,250,241,.65);font-size:.82rem}
     .focus{overflow:hidden;border-radius:28px;background:var(--night);color:#fff;padding:24px;box-shadow:var(--shadow);position:relative}.focus:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-85px;top:-95px;box-shadow:0 0 0 28px rgba(255,255,255,.035)}
     .focus-label{color:#e9cfa5;font-size:.8rem;letter-spacing:.18em;font-weight:800}.next-name{font-family:Georgia,"Songti SC",serif;font-size:1.55rem;margin:8px 0 2px}.next-meta{color:#bfc8d2;font-size:.9rem}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;position:relative;z-index:1}.unit{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:11px 5px;text-align:center}.num{display:block;font:600 clamp(1.45rem,7vw,2.3rem)/1 Georgia,serif;font-variant-numeric:tabular-nums}.lbl{font-size:.7rem;color:#bfc8d2}
+    .weather-card{overflow:hidden}.weather-main{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;padding:20px}.weather-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.live{font-size:.75rem;font-weight:800;color:var(--sage)}.live:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:#668555;box-shadow:0 0 0 4px rgba(102,133,85,.12)}.refresh{border:1px solid var(--line);background:var(--cream);color:var(--ink);border-radius:999px;padding:7px 11px;font:inherit;font-size:.76rem;cursor:pointer}.weather-now{display:flex;align-items:center;gap:14px;margin-top:15px}.weather-icon{font-size:3rem;line-height:1}.weather-temp{font:600 3rem/1 Georgia,serif}.weather-desc{font-weight:700}.weather-sub,.weather-updated{color:var(--muted);font-size:.78rem}.weather-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:16px}.weather-stat{padding:9px;background:#f2e7d7;border-radius:11px;text-align:center}.weather-stat strong{display:block;font-size:.88rem}.weather-stat span{font-size:.68rem;color:var(--muted)}.wear{background:var(--night);color:white;border-radius:16px;padding:16px}.wear h3{font-size:.9rem;margin:0 0 8px;color:#e9cfa5}.wear ul{margin:0;padding-left:18px}.wear li{font-size:.78rem;margin:5px 0;color:#e6ebef}.forecast-wrap{border-top:1px solid var(--line);padding:15px 20px 19px}.forecast-title{display:flex;justify-content:space-between;gap:10px;font-size:.76rem;font-weight:800;margin-bottom:10px}.forecast-note{font-weight:400;color:var(--muted)}.forecast{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.forecast-day{background:#f3e9da;border-radius:13px;padding:11px;text-align:center}.forecast-day b{display:block;font-size:.78rem}.forecast-day i{display:block;font-style:normal;font-size:1.45rem;margin:5px}.forecast-day span{font-size:.76rem}.forecast-day small{display:block;color:var(--muted);font-size:.65rem;margin-top:3px}.weather-error{padding:18px;color:var(--muted);font-size:.82rem}
     section{padding:32px 0 4px}.section-kicker{font-size:.75rem;color:var(--rust);font-weight:800;letter-spacing:.14em}.section-title{font:500 1.85rem/1.15 Georgia,"Songti SC",serif;margin:5px 0 16px}.section-note{color:var(--muted);font-size:.86rem;margin:-8px 0 18px}
     .card{background:rgba(255,250,241,.88);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 8px 24px rgba(69,45,25,.07)}
     .map{padding:14px;overflow:hidden}.map svg{width:100%;height:auto;display:block}.legend{display:flex;gap:14px;flex-wrap:wrap;padding:3px 9px 10px;font-size:.75rem;color:var(--muted)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
@@ -25,7 +26,7 @@
     .todo{padding:8px 18px}.todo ul{list-style:none;margin:0;padding:0}.todo li{position:relative;padding:13px 4px 13px 25px;border-bottom:1px dashed var(--line);font-size:.9rem}.todo li:last-child{border:0}.todo li:before{content:"—";position:absolute;left:1px;color:var(--rust);font-weight:bold}
     .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tip{padding:15px}.tip b{display:block;font-size:.82rem;margin-bottom:4px}.tip span{font-size:.76rem;color:var(--muted)}
     footer{padding:48px 0 32px;text-align:center;color:var(--muted);font-size:.75rem}.offline{display:inline-block;margin-bottom:8px;color:var(--sage);font-weight:800}
-    @media(max-width:620px){.booking-grid{grid-template-columns:1fr}.booking{min-height:0}.tips{grid-template-columns:1fr}.hero{padding-top:22px}.focus{padding:20px 16px}.event{grid-template-columns:55px 1fr}.section-title{font-size:1.65rem}}
+    @media(max-width:620px){.weather-main{grid-template-columns:1fr}.booking-grid{grid-template-columns:1fr}.booking{min-height:0}.tips{grid-template-columns:1fr}.hero{padding-top:22px}.focus{padding:20px 16px}.event{grid-template-columns:55px 1fr}.section-title{font-size:1.65rem}.ledger{overflow-x:auto}.ledger table{min-width:510px}}
     @media print{body{background:white}.focus{background:#26364b!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.days{display:none}.card{box-shadow:none}section{break-inside:avoid}.wrap{width:94%}}
   </style>
 </head>
@@ -49,6 +50,23 @@
           <div class="unit"><span class="num" id="m">--</span><span class="lbl">分</span></div>
           <div class="unit"><span class="num" id="s">--</span><span class="lbl">秒</span></div>
         </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="weather-title">
+      <div class="section-kicker">LIVE · WEATHER</div><h2 class="section-title" id="weather-title">Uluṟu 实时天气</h2>
+      <p class="section-note">联网时自动更新；旅行日期进入 16 天预报范围后，会自动切换为 10/3–10/5。</p>
+      <div class="card weather-card" id="weatherCard">
+        <div class="weather-main">
+          <div>
+            <div class="weather-head"><span class="live" id="weatherStatus">正在获取最新天气</span><button class="refresh" id="weatherRefresh" type="button">刷新</button></div>
+            <div class="weather-now"><span class="weather-icon" id="weatherIcon">◌</span><div><div><span class="weather-temp" id="weatherTemp">--</span> °C</div><div class="weather-desc" id="weatherDesc">载入中</div><div class="weather-sub" id="weatherFeels">体感温度 --°</div></div></div>
+            <div class="weather-stats"><div class="weather-stat"><strong id="weatherWind">--</strong><span>风速 km/h</span></div><div class="weather-stat"><strong id="weatherRain">--</strong><span>降雨概率</span></div><div class="weather-stat"><strong id="weatherUV">--</strong><span>最高 UV</span></div></div>
+            <div class="weather-updated" id="weatherUpdated" style="margin-top:10px">数据尚未更新</div>
+          </div>
+          <aside class="wear"><h3 id="wearTitle">今天怎么穿</h3><ul id="wearAdvice"><li>天气载入后自动生成建议</li></ul></aside>
+        </div>
+        <div class="forecast-wrap"><div class="forecast-title"><span id="forecastHeading">未来三天</span><span class="forecast-note" id="forecastNote">旅行预报尚未开放</span></div><div class="forecast" id="forecast"><div class="forecast-day">载入中</div><div class="forecast-day">载入中</div><div class="forecast-day">载入中</div></div></div>
       </div>
     </section>
 
@@ -155,6 +173,32 @@
       {at:'2026-10-05T15:00:00+09:30',name:'返程航班',meta:'Day 3 · 具体时间待确认'}
     ];
     const $=id=>document.getElementById(id),pad=n=>String(n).padStart(2,'0');
+    const WEATHER_URL='https://api.open-meteo.com/v1/forecast?latitude=-25.3444&longitude=131.0369&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max,wind_speed_10m_max&timezone=Australia%2FDarwin&forecast_days=16';
+    const TRIP_DATES=['2026-10-03','2026-10-04','2026-10-05'];
+    const weatherInfo=code=>{if(code===0)return['☀️','晴朗'];if(code<=2)return['🌤️','晴间多云'];if(code===3)return['☁️','多云'];if(code<=48)return['🌫️','有雾'];if(code<=57)return['🌦️','毛毛雨'];if(code<=67)return['🌧️','有雨'];if(code<=77)return['🌨️','降雪'];if(code<=82)return['🌦️','阵雨'];if(code<=86)return['🌨️','阵雪'];return['⛈️','雷暴']};
+    const dateLabel=s=>new Intl.DateTimeFormat('zh-CN',{timeZone:'Australia/Darwin',month:'numeric',day:'numeric',weekday:'short'}).format(new Date(s+'T12:00:00+09:30'));
+    function clothingAdvice(d,indices,isTrip){
+      const max=Math.max(...indices.map(i=>d.temperature_2m_max[i])),min=Math.min(...indices.map(i=>d.temperature_2m_min[i])),rain=Math.max(...indices.map(i=>d.precipitation_probability_max[i]||0)),uv=Math.max(...indices.map(i=>d.uv_index_max[i]||0)),wind=Math.max(...indices.map(i=>d.wind_speed_10m_max[i]||0));
+      const tips=[];
+      if(max>=32)tips.push('白天炎热：穿轻薄透气的长袖和宽松长裤，避免深色厚衣。');else if(max>=25)tips.push('白天偏暖：短袖或轻薄长袖即可，徒步优先透气速干面料。');else tips.push('白天气温温和：薄长袖或短袖搭配轻外层。');
+      if(min<=12)tips.push('清晨与夜晚较凉：带薄羽绒或保暖外套。');else if(max-min>=12)tips.push('昼夜温差明显：采用短袖＋可脱薄外套的分层穿法。');
+      if(uv>=8)tips.push('紫外线很强：宽檐帽、墨镜与 SPF50+ 防晒必备。');else if(uv>=5)tips.push('紫外线偏强：戴帽子、墨镜并及时补涂防晒。');
+      if(rain>=40)tips.push('有降雨可能：带轻便防水外套。');
+      if(wind>=30)tips.push('风力可能较大：加一层防风衣，并固定好帽子。');
+      tips.push('徒步穿包脚防滑鞋，并随身带足量饮水。');
+      $('wearTitle').textContent=isTrip?'旅行期间怎么穿':'今天怎么穿';$('wearAdvice').innerHTML=tips.map(x=>'<li>'+x+'</li>').join('');
+    }
+    function renderWeather(data,cached=false){
+      const c=data.current,d=data.daily,[icon,desc]=weatherInfo(c.weather_code);$('weatherIcon').textContent=icon;$('weatherTemp').textContent=Math.round(c.temperature_2m);$('weatherDesc').textContent=desc;$('weatherFeels').textContent='体感温度 '+Math.round(c.apparent_temperature)+'°';$('weatherWind').textContent=Math.round(c.wind_speed_10m);
+      const tripIndices=TRIP_DATES.map(x=>d.time.indexOf(x)),isTrip=tripIndices.every(i=>i>=0),indices=isTrip?tripIndices:[0,1,2];
+      $('weatherRain').textContent=Math.round(d.precipitation_probability_max[indices[0]]||0)+'%';$('weatherUV').textContent=(d.uv_index_max[indices[0]]||0).toFixed(1);$('forecastHeading').textContent=isTrip?'旅行天气 · 10/3–10/5':'未来三天';$('forecastNote').textContent=isTrip?'行前仍需再次刷新':'进入16天范围后自动切换旅行日期';
+      $('forecast').innerHTML=indices.map(i=>{const w=weatherInfo(d.weather_code[i]);return '<div class="forecast-day"><b>'+dateLabel(d.time[i])+'</b><i>'+w[0]+'</i><span>'+Math.round(d.temperature_2m_max[i])+'° / '+Math.round(d.temperature_2m_min[i])+'°</span><small>降雨 '+Math.round(d.precipitation_probability_max[i]||0)+'% · UV '+(d.uv_index_max[i]||0).toFixed(1)+'</small></div>'}).join('');
+      clothingAdvice(d,indices,isTrip);$('weatherStatus').textContent=cached?'离线缓存':'实时天气已更新';$('weatherUpdated').textContent=(cached?'上次联网数据 · ':'更新于 ')+new Intl.DateTimeFormat('zh-CN',{timeZone:'Australia/Darwin',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date());
+    }
+    async function loadWeather(){
+      $('weatherStatus').textContent='正在获取最新天气';$('weatherRefresh').disabled=true;
+      try{const res=await fetch(WEATHER_URL);if(!res.ok)throw Error('weather');const data=await res.json();localStorage.setItem('uluruWeather',JSON.stringify({data,time:Date.now()}));renderWeather(data,false)}catch(e){try{const saved=JSON.parse(localStorage.getItem('uluruWeather'));if(saved&&saved.data)renderWeather(saved.data,true);else throw e}catch(_){$('weatherStatus').textContent='天气暂时无法更新';$('weatherCard').querySelector('.weather-updated').textContent='请联网后点击刷新；行前以官方天气和公园通知为准。'}}finally{$('weatherRefresh').disabled=false}}
+    $('weatherRefresh').addEventListener('click',loadWeather);loadWeather();setInterval(loadWeather,1800000);
     function tick(){const now=Date.now();let e=events.find(x=>new Date(x.at).getTime()>now);if(!e){$('nextName').textContent='旅程圆满结束';$('nextMeta').textContent='把红土的颜色带回家';['d','h','m','s'].forEach(id=>$(id).textContent='00');return}const diff=new Date(e.at).getTime()-now;$('nextName').textContent=e.name;$('nextMeta').textContent=e.meta;$('d').textContent=Math.floor(diff/86400000);$('h').textContent=pad(Math.floor(diff/3600000)%24);$('m').textContent=pad(Math.floor(diff/60000)%60);$('s').textContent=pad(Math.floor(diff/1000)%60)}
     tick();setInterval(tick,1000);
   </script>
