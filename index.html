@@ -19,6 +19,7 @@
     .map{padding:14px;overflow:hidden}.map svg{width:100%;height:auto;display:block}.legend{display:flex;gap:14px;flex-wrap:wrap;padding:3px 9px 10px;font-size:.75rem;color:var(--muted)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
     .notice{padding:15px 17px;border-left:4px solid var(--sun);margin-bottom:14px;font-size:.88rem}.notice strong{display:block;color:var(--rust)}
     .booking-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.booking{padding:17px;min-height:154px;position:relative}.booking-icon{font-size:1.35rem}.booking h3{font-size:1rem;margin:8px 0 5px}.status{position:absolute;top:14px;right:14px;padding:4px 8px;background:#f4e2c4;color:#8a4d16;border-radius:999px;font-size:.7rem;font-weight:800}.status.confirmed{background:#dce8d6;color:#40583a}.booking p{font-size:.83rem;color:var(--muted);margin:3px 0}.booking .action{color:var(--ink);font-weight:650}
+    .ledger{overflow:hidden}.ledger table{width:100%;border-collapse:collapse}.ledger th,.ledger td{padding:13px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:.84rem}.ledger th{font-size:.72rem;letter-spacing:.08em;color:var(--muted);background:#f3e9d9}.ledger td:nth-child(2),.ledger th:nth-child(2),.ledger td:last-child,.ledger th:last-child{text-align:right}.ledger tr:last-child td{border-bottom:0}.money{font-variant-numeric:tabular-nums;font-weight:700}.pending{color:var(--muted)}.totalbox{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}.totalbox div{background:var(--cream);padding:17px}.totalbox span{display:block;color:var(--muted);font-size:.72rem}.totalbox strong{font:600 1.35rem Georgia,serif;color:var(--rust)}
     .days{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:none;position:sticky;top:0;z-index:5;background:linear-gradient(var(--paper) 80%,transparent)}.daytab{flex:0 0 auto;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:var(--cream);border-radius:999px;padding:8px 13px;font-size:.82rem}.daytab:first-child{background:var(--rust);color:white;border-color:var(--rust)}
     .day{margin-top:22px}.dayhead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:10px}.dayhead h3{font:500 1.45rem Georgia,"Songti SC",serif;margin:0}.dayhead span{color:var(--muted);font-size:.78rem}.timeline{margin-top:4px}.event{display:grid;grid-template-columns:62px 1fr;gap:13px;padding:17px 0;border-bottom:1px dashed var(--line)}.time{font:bold .82rem Georgia,serif;color:var(--rust);padding-top:2px}.event h4{margin:0 0 4px;font-size:.96rem}.event p{margin:0;color:var(--muted);font-size:.84rem}.tag{display:inline-block;margin-top:7px;border-radius:5px;padding:3px 7px;font-size:.68rem;font-weight:800;letter-spacing:.05em}.book{background:#f5d6c9;color:#85331f}.drive{background:#dfe7d8;color:#48543e}.flex{background:#e1e6ed;color:#3b4b60}
     .todo{padding:8px 18px}.todo ul{list-style:none;margin:0;padding:0}.todo li{position:relative;padding:13px 4px 13px 25px;border-bottom:1px dashed var(--line);font-size:.9rem}.todo li:last-child{border:0}.todo li:before{content:"—";position:absolute;left:1px;color:var(--rust);font-weight:bold}
@@ -73,18 +74,38 @@
 
     <section aria-labelledby="booking-title">
       <div class="section-kicker">02 · BOOKINGS</div><h2 class="section-title" id="booking-title">预订进度</h2>
-      <div class="card notice"><strong>Astro Tour 已确认</strong>具体接车时间与集合点保存在私人确认邮件中；10 月 3 日 14:00 前留意运营方的最终接车通知。</div>
+      <div class="card notice"><strong>酒店与 Astro Tour 已确认</strong>Outback Hotel 已支付；Astro Tour 的具体接车时间与集合点保存在私人确认邮件中，10 月 3 日 14:00 前留意最终通知。</div>
       <div class="booking-grid">
         <article class="card booking"><span class="status">待预订</span><div class="booking-icon">✈︎</div><h3>往返机票 · SYD ⇄ AYQ</h3><p class="action">优先选择 10/3 早到、10/5 午后返程</p><p>悉尼机场 → Ayers Rock Airport</p><p>航班号／时间／航空公司：待确认</p></article>
         <article class="card booking"><span class="status">待预订</span><div class="booking-icon">⌁</div><h3>租车 · Ayers Rock Airport</h3><p class="action">三人建议中型 SUV，确认不限里程</p><p>取车：10/3 抵达后 · 还车：10/5 起飞前</p><p>地址：Coote Rd, Yulara NT 0872 · 电话待订单确认</p></article>
-        <article class="card booking"><span class="status">待预订</span><div class="booking-icon">⌂</div><h3>住宿 · Yulara 两晚</h3><p class="action">优先 Ayers Rock Resort 区域</p><p>入住 10/3 · 退房 10/5 · 3 人房型</p><p>酒店名称、地址、前台电话：待确认</p></article>
+        <article class="card booking"><span class="status confirmed">已预订</span><div class="booking-icon">⌂</div><h3>Outback Hotel</h3><p class="action">住宿费用已支付</p><p>两晚合计：AUD 1,158.33</p></article>
         <article class="card booking"><span class="status confirmed">已预订</span><div class="booking-icon">✦</div><h3>Uluru Astro Tour · 10/3</h3><p class="action">官方约 3 小时 · 含度假村往返接送</p><p>Pickup time／集合点：查看私人确认邮件</p><p>按邮件要求提前抵达，携带水与薄外套</p></article>
         <article class="card booking"><span class="status">待购买</span><div class="booking-icon">◎</div><h3>国家公园通票</h3><p class="action">Uluṟu–Kata Tjuṯa National Park 3 日通票</p><p>覆盖 10/3–10/5 的三天自驾行程</p><p>出发前核对开放时间与步道关闭规则</p></article>
       </div>
     </section>
 
+    <section aria-labelledby="ledger-title">
+      <div class="section-kicker">03 · EXPENSES</div><h2 class="section-title" id="ledger-title">旅行记账单</h2>
+      <p class="section-note">金额均为澳元；只统计已有付款凭证的实际支出，待预订项目不计入合计。</p>
+      <div class="card ledger">
+        <table aria-label="乌鲁鲁三人旅行费用表">
+          <thead><tr><th>项目</th><th>状态</th><th>费用</th></tr></thead>
+          <tbody>
+            <tr><td>Outback Hotel · 2 晚</td><td>已支付</td><td class="money">$1,158.33</td></tr>
+            <tr><td>Uluru Astro Tour · 3 人</td><td>已支付</td><td class="money">$431.94</td></tr>
+            <tr><td>SYD ⇄ AYQ 往返机票 · 3 人</td><td class="pending">待填写</td><td class="pending">—</td></tr>
+            <tr><td>AYQ 机场租车</td><td class="pending">待填写</td><td class="pending">—</td></tr>
+            <tr><td>国家公园 3 日通票</td><td class="pending">待填写</td><td class="pending">—</td></tr>
+            <tr><td>加油与停车</td><td class="pending">旅行中记录</td><td class="pending">—</td></tr>
+            <tr><td>餐饮与补给</td><td class="pending">旅行中记录</td><td class="pending">—</td></tr>
+          </tbody>
+        </table>
+        <div class="totalbox"><div><span>目前已确认支出</span><strong>AUD 1,590.27</strong></div><div><span>目前人均支出</span><strong>AUD 530.09</strong></div></div>
+      </div>
+    </section>
+
     <section aria-labelledby="plan-title">
-      <div class="section-kicker">03 · ITINERARY</div><h2 class="section-title" id="plan-title">逐日行程</h2>
+      <div class="section-kicker">04 · ITINERARY</div><h2 class="section-title" id="plan-title">逐日行程</h2>
       <p class="section-note">时间会在航班和 10 月日出日落公布后微调；步行安排避开中午高温。</p>
       <nav class="days" aria-label="跳转到每日行程"><a class="daytab" href="#day1">Day 1 · 沙漠星空</a><a class="daytab" href="#day2">Day 2 · 峡谷日落</a><a class="daytab" href="#day3">Day 3 · 岩下清晨</a></nav>
       <article class="day" id="day1"><div class="dayhead"><h3>10.03 · 抵达与观星</h3><span>🌌 星空之夜</span></div><div class="timeline">
@@ -112,11 +133,11 @@
       </div></article>
     </section>
 
-    <section aria-labelledby="todo-title"><div class="section-kicker">04 · BEFORE YOU GO</div><h2 class="section-title" id="todo-title">待办清单</h2><p class="section-note">纯列表，不记录勾选状态；三个人可直接截图分工。</p>
-      <div class="card todo"><ul><li>✅ Uluru Astro Tour 已预订；具体接车信息保存在私人邮件中</li><li>10/3 14:00 前查看 Astro Tour 最终 pickup 确认邮件</li><li>预订 SYD ⇄ AYQ 往返航班，确认每人行李额度</li><li>预订 3 人房 × 2 晚，确认停车、早餐与 late checkout</li><li>预订租车，添加全部驾驶员并检查保险 excess</li><li>购买 Uluṟu–Kata Tjuṯa National Park 3 日通票</li><li>如想吃正式晚餐，提前预订 10/4 晚餐</li><li>出发前 7 天查看公园开放时间、步道关闭和天气</li><li>下载离线地图；将订单截图存进三个人的手机</li><li>准备防晒、帽子、头灯、水壶、薄外套和舒适步行鞋</li></ul></div>
+    <section aria-labelledby="todo-title"><div class="section-kicker">05 · BEFORE YOU GO</div><h2 class="section-title" id="todo-title">待办清单</h2><p class="section-note">纯列表，不记录勾选状态；三个人可直接截图分工。</p>
+      <div class="card todo"><ul><li>✅ Outback Hotel 两晚已预订并支付</li><li>✅ Uluru Astro Tour 已预订；具体接车信息保存在私人邮件中</li><li>10/3 14:00 前查看 Astro Tour 最终 pickup 确认邮件</li><li>预订 SYD ⇄ AYQ 往返航班，确认每人行李额度</li><li>向酒店确认停车、早餐与 late checkout</li><li>预订租车，添加全部驾驶员并检查保险 excess</li><li>购买 Uluṟu–Kata Tjuṯa National Park 3 日通票</li><li>如想吃正式晚餐，提前预订 10/4 晚餐</li><li>出发前 7 天查看公园开放时间、步道关闭和天气</li><li>下载离线地图；将订单截图存进三个人的手机</li><li>准备防晒、帽子、头灯、水壶、薄外套和舒适步行鞋</li></ul></div>
     </section>
 
-    <section aria-labelledby="tips-title"><div class="section-kicker">05 · FIELD NOTES</div><h2 class="section-title" id="tips-title">红土小贴士</h2><div class="tips">
+    <section aria-labelledby="tips-title"><div class="section-kicker">06 · FIELD NOTES</div><h2 class="section-title" id="tips-title">红土小贴士</h2><div class="tips">
       <div class="card tip"><b>尊重文化</b><span>不攀爬 Uluṟu；遇到“请勿摄影”标识立即收起相机，不进入封闭或神圣区域。</span></div>
       <div class="card tip"><b>水与温度</b><span>10 月日间可很热。清晨徒步、频繁喝水；高温时步道可能提前关闭。</span></div>
       <div class="card tip"><b>车与信号</b><span>日出日落前后留意野生动物。国家公园内信号不稳定，离线保存本页和订单。</span></div>
